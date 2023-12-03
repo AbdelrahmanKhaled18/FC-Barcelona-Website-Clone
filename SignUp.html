@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>
+             Register 
+         </title>
+         <meta charset="UTF-8"/>
+         <link rel="icon" sizes="192x192" type="image/png" href="pics/logo.webp">
+    </head>
+    <body class="login">
+        <header>
+            <img src="pics/logo.webp" class="logo_login" id="logo">
+        </header>
+        
+        <div class="label">Sign Up</div>
+        <div class="login-container">
+            <form class="login_form" action="home.html" method="post" onsubmit="return validateFormSignUp()">
+                <div class="font">Username </div>
+                <input type="email" name="email" placeholder="Enter Your Username" id="email">
+                <div id="email_error"> Plese Fill up your Username</div>
+                <div class="font font2">Password</div>
+                <input type="password" name="password" placeholder="Enter Your Password" id="password">
+                <div id="password_error"> Plese Fill up your Password</div>
+                <div class="font font2">Gender</div>
+                <div class="gender-options">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male" class="font font2">Male</label>
+    
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female" class="font font2">Female</label>
+    
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other" class="font font2">Other</label>
+                </div>
+                <div class="terms-checkbox">
+                    <input type="checkbox" id="terms" name="terms">
+                    <label for="terms" class="font font2">Do you agree to the terms and conditions for Barcelona FC?</label>
+                </div>  
+                <button type="submit">Register</button>
+            </form>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

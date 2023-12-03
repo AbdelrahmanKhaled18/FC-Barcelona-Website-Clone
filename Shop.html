@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <title>
+             Barca Shop 
+         </title>
+         <meta charset="UTF-8"/>
+         <link rel="icon" sizes="192x192" type="image/png" href="pics/logo.webp">
+    </head>
+    <body class="login" >
+        <header>
+            <ul>
+                <li><a href="Contact.html">Contact Us</a></li>
+                <li>
+                    <a href="#">About Us ▼</a>
+                    <ul class="dropdown">
+                        <li><a href="trophies.html">Trophies</a></li>
+                        <li><a href="Players.html">Squad</a></li>
+                        <li class="nested-dropdown">
+                            <a href="#">History ▶</a>
+                            <ul class="nested">
+                                <li><a href="Legends.html">Legandary Players</a></li>
+                                <li><a href="Coaches.html">Coaches</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="login.html">Logout</a></li>
+                <li><a href="Shop.html">Shop</a></li>
+            </ul>
+            <img src="pics/logo.webp" alt="Barcelona FC Logo" class="logo_first">
+        </header>
+        <h2 class="label2">Barca Shirt for 23/24 Season</h2>
+        <section class="productcont">
+            <div><img src="pics/homepic-removebg-preview.png" alt="2019 Shirt" id="ronaldoShirt" width="400px" height="auto" style="margin-top: -50px;" ></div>
+            <div class="rightside">
+                
+                <div style="width: 50px; height: 50px; background: linear-gradient(45deg, #A50044, #004D98); 
+                border-radius: 50%; margin-top: 10px;" id="home" onclick="homeKitjuve()"></div>
+
+                <div style=" width: 50px; height: 50px; background-color:white;
+                 border-radius: 50%; margin-top: 10px; border-width: 2px; border-style: solid;" id="third" onclick="awayKitjuve()"></div>
+                <div style=" width: 50px; height: 50px; background-color: rgb(8, 249, 209);
+                 border-radius: 50%; margin-top: 10px; border-width: 2px; border-style: solid;" id="away" onclick="thirdKitjuve()"></div><br><br>
+                <label for="shirtSize" class="size">Size:</label>
+                 <select id="shirtSize" name="shirtSize" class="shirtSize">
+                     <option value="small" >Small</option>
+                     <option value="medium">Medium</option>
+                     <option value="large">Large</option>
+                     <option value="x-large">XL</option>
+                     <option value="xx-large">XXL</option>
+                 </select><br><br>
+            </div>
+        </section>
+        <a href="#"><input type="button" value="Buy Now" class="login_form2" onclick="buy()"></a><br>
+        <footer>
+            <h1 class="barcelona">FC Barcelona Partners</h1>
+          <div class="logos">
+            <a href="https://www.nike.com" class="partner-link"><img src="pics/nike.webp" alt="Logo 1" class="partners"><span class="underline"></span></a>
+            <a href="https://open.spotify.com/genre/0JQ5DAqbMKFzsCGvlWfxyX" class="partner-link"><img src="pics/spotify.webp" alt="Logo 2" class="partners"><span class="underline"></span></a>
+          </div>
+
+          <h1 class="barcelona">Find Us on Social Media</h1>
+
+          <div class="logos2">
+            <a href="https://open.spotify.com/user/31gorrj76f2m3wczoifm6f6tbn3q?si=a20bf0c076684729&nd=1" class="partner-link"><img src="pics/spotify_social.jpg" alt="Logo 1" class="partners2"><span class="underline"></span></a>
+            <a href="https://www.instagram.com/fcbarcelona/" class="partner-link"><img src="pics/Instagram-1280x720.png" alt="Logo 2" class="partners2"><span class="underline"></span></a>
+            <a href="https://www.tiktok.com/@fcbarcelona" class="partner-link"><img src="pics/Symbol-Tiktok.png" alt="Logo 2" class="partners2"><span class="underline"></span></a>
+            <a href="https://es-es.facebook.com/fcbarcelona/" class="partner-link"><img src="pics/facebook.jpg" alt="Logo 2" class="partners2"><span class="underline"></span></a>
+          </div>
+
+
+
+        <img src="pics/logo.webp" alt="Barcelona FC Logo" class="logo-visca">
+        <h1 class="visca-barca">#Visca_El_Barça</h1>
+        <p class="copyright">&copy; 2023 FC Barcelona. All rights reserved.</p>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

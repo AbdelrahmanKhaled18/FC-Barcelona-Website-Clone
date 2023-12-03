@@ -1,0 +1,961 @@
+
+/*body {
+    background: radial-gradient(circle at top left, #004D98, transparent),
+                radial-gradient(circle at top right, #A50044, transparent);
+    background-blend-mode: multiply;
+    background-size: 200% 200%;
+  }*/
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+    
+}
+
+.hero{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(12,3,51,0.3),rgba(12,3,51,0.3) );
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0; /* Align the navigation bar to the right */
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Align the content (list items) to the right */
+}
+
+
+.logo_first {
+    width: 100px;;
+    margin-top:20px;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 17px;
+}
+.back_video{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media(min-aspect-ratio:16/9){
+    .back_video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media(max-aspect-ratio:16/9){
+    .back_video{
+        width: auto;
+        height: 100%;
+    }
+}
+.content{
+    text-align: center;
+}
+
+.content h1{
+    font-size: 100px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.content h1:hover{
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+
+.login{
+    background-color: #181733 !important;
+}
+
+
+.logo_login {
+    width: 100px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+}
+
+.label {
+    font-weight: bold;
+    text-align: center;
+    color: gold;
+    margin-top: 200px;
+    font-style: italic;
+    font-size: 50px;
+}
+
+
+.login-container {
+    position: relative;
+	margin-top: 10px;
+	width: 450px;
+	height: auto;
+	background:#181733 !important ;
+	border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    left: 35%;
+
+}
+
+.login_form{
+	padding: 20px 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.login_form .font{
+	font-size: 18px;
+	color: goldenrod;
+	margin: 5px 0;
+    font-weight: bold;
+    
+}
+
+.login_form .font2{
+	margin-top: 30px;
+}
+
+.login_form input{
+	height: 40px;
+	width: 350px;
+	padding: 0 5px;
+	font-size: 18px;
+	outline: none;
+	border: 1px solid silver;
+}
+
+.login_form button{
+    margin: 45px 0 30px 0;
+    height: 45px;
+    width: 365px;
+    font-size: 20px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: #1A237E;
+    border-radius: 3px;
+    border: 1px solid #3949AB;
+    transition: .5s;
+}
+
+.login_form button:hover{
+    background: #151c6a;
+}
+
+.login_form #email_error,
+.login_form #password_error{
+    margin-top: 5px;
+    width: 345px;
+    font-size: 18px;
+    color: #C62828;
+    background: rgba(255,0,0,0.1);
+    text-align: center;
+    border-radius: 3px;
+    padding: 5px 8px;
+    border: 1px solid #EF9A9A;
+    display: none;
+}
+
+
+
+.gender-options {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 14px;
+}
+
+/* Styling for radio buttons */
+.gender-options input[type="radio"] {
+    transform: scale(0.5); /* Making radio buttons smaller */
+}
+
+/* Optional: Adjusting the label position for radio buttons */
+.gender-options label {
+    margin-bottom: 0;
+}
+
+
+/* CSS for styling the agreement checkbox and label */
+/* CSS for styling the agreement checkbox and label */
+.terms-checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.terms-checkbox input[type="checkbox"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #444;
+    border-radius: 3px;
+    margin-right: 8px;
+    cursor: pointer;
+    position: relative;
+}
+
+.terms-checkbox input[type="checkbox"]:checked {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Styling for the checkmark icon */
+.terms-checkbox input[type="checkbox"]:checked::before {
+    content: '\2713'; /* Unicode checkmark character */
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+ul {
+    list-style: none;
+    background: #22438C;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+}
+
+ul li a {
+    display: block;
+    padding: 20px 25px;
+    color: #FFF;
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+}
+
+ul li:hover > a {
+    background: #112C66;
+}
+
+ul li ul.dropdown {
+    display: none;
+    position: absolute;
+    background-color: #22438C;
+    min-width: 100%;
+    left: 0;
+    top: 100%;
+    z-index: 999;
+}
+
+ul li:hover > ul.dropdown {
+    display: block;
+}
+
+ul li ul.dropdown li {
+    display: block;
+}
+
+ul li ul.dropdown li a {
+    padding: 15px 25px;
+}
+
+ul li ul.dropdown li:hover a {
+    background: #112C66;
+}
+
+/* Styling for nested dropdown */
+ul li ul.dropdown li.nested-dropdown {
+    position: relative;
+}
+
+ul li ul.dropdown li.nested-dropdown > ul.nested {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 100%;
+    z-index: 999;
+}
+
+ul li ul.dropdown li.nested-dropdown:hover > ul.nested {
+    display: block;
+}
+
+
+.home{
+    background-color: #181733 !important;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-repeat: no-repeat;
+    display: block;
+    overflow: hidden;
+    background-blend-mode: soft-light;
+}
+
+.home_content {
+    text-align: center;
+}
+
+.home_content a {
+    display: inline-block; /* or block */
+    margin-top: 400px; /* Adjust this value as needed */
+    font-size: 50px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+.home_content a:hover {
+    text-decoration: underline;
+}
+
+
+.contact_txet{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 50px;    
+    color: #FFF;
+}
+
+.honor{
+    font-family: "Montserrat", sans-serif;
+  font-size: 70px;
+  font-weight: bold;
+    font-weight: 800;
+  color: #de0c21;
+  padding: 20px 0;
+  text-align: center;
+}
+
+pre{
+    text-align: center;
+    font-size: 18px;
+    color: goldenrod;
+    padding-right: 40px;
+    text-decoration: solid;
+
+}
+
+.trophies_pic{
+    display: block;
+    margin: 0 auto; /* This will horizontally center the image */
+    width: auto;
+}
+
+
+
+.list-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    
+}
+.list-item img {
+    width: auto; /* Adjust image size as needed */
+    margin-right: 20px;
+    float: left;
+    background-color: white;
+}
+.list-item-content {
+    flex-grow: 1;
+}
+h2 {
+    margin: 0;
+    color: goldenrod;
+}
+
+p {
+    margin: 5px 0;
+    margin-right: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+
+.tro_list {
+    list-style: none;
+    padding: 0;
+    justify-content: center; /* Center content horizontally */
+    align-items: center;
+    background-color: #181733 !important;
+    margin-top: 50px;
+}
+
+.tro_item {
+    display: flex;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    justify-content: center; /* Center content horizontally */
+    align-items: center;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    width: 1000px;
+    margin-left: 250px;
+    margin-bottom: 50px;
+}
+
+
+
+.partners {
+    display: inline-block;
+    width: 200px;
+    height: auto;
+    margin: 0 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: gold;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.partner-link {
+    display: inline-block;
+    position: relative;
+}
+
+ .partner-link:hover .underline {
+    transform: scaleX(1);
+}
+
+.barcelona {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-align: center;
+    color: goldenrod;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+}
+
+.background-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    filter: brightness(60%); /* Darken the image */
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent; /* No background color */
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.overlay-text a {
+    color: #fff; /* White text */
+    text-decoration: none;
+    font-size: 50px; /* Adjust font size */
+    transition: text-decoration 0.3s ease-in-out;
+    font-weight: 600;
+}
+
+.overlay-text a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100px;;
+    z-index: 1;
+}
+
+.yala{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.visca-barca {
+    position: absolute;
+    bottom: auto;
+    left: auto;
+    color: goldenrod;
+    margin-left: 70px;
+    margin-bottom: 10px;
+}
+
+.logo-visca{
+    width: 40px;
+    position: absolute;
+    bottom: auto;
+    left: auto;
+    margin-left: 20px;
+}
+
+/* CSS */
+.player-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Items wrap to the next row */
+    justify-content: space-between; /* Distribute items evenly */
+    padding: 0;
+    background-color: #181733 !important;
+    margin-top: 20px;
+    margin-bottom: 100px;
+
+}
+
+.player-item {
+    position: relative;
+    width: calc(30% - 10px); /* Adjust width to fit three items in a row */
+    margin-bottom: 20px;
+    overflow: hidden; /* Hide overflow */
+}
+
+.player-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.player-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #181733 !important;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    opacity: 0; /* Initially hidden */
+    pointer-events: none; /* Ignore pointer events when hidden */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+    color: goldenrod;
+}
+
+.player-item:hover .player-description {
+    transform: translateY(0);
+    opacity: 1; /* Show on hover */
+    pointer-events: auto; /* Enable pointer events on hover */
+}
+
+.player-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #181733 !important;
+    padding: 10px;
+    margin: 0;
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+    color: goldenrod;
+}
+
+.player-item:hover .player-name {
+    opacity: 0; /* Hide on hover */
+    pointer-events: none; /* Ignore pointer events when hidden */
+}
+
+
+.messi{
+    color: goldenrod;
+}
+
+
+
+
+/* Styles for the squad container */
+.squad-container {
+    margin-bottom: 20px;
+}
+
+/* Set general styles */
+.squad-container ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #181733 !important;
+    padding: 0;
+    margin: 0;
+}
+
+.squad-container li {
+    width: calc(33.33% - 20px); /* Three players in a row with margin */
+    margin-bottom: 20px;
+    position: relative;
+    margin-left: 10px; /* Set a default small left margin */
+    margin-right: 10px; /* Set a default small right margin */
+    border: #ccc;
+}
+
+/* Adjust margins for left and right items */
+.squad-container li:first-child {
+    margin-left: 10px; /* Smaller left margin for the first item */
+}
+
+.squad-container li:last-child {
+    margin-right: 10px; /* Smaller right margin for the last item */
+}
+
+/* Media query for smaller screens if needed */
+@media (max-width: 900px) {
+    .squad-container li {
+        width: calc(50% - 20px); /* Two players in a row with margin */
+    }
+    
+    /* Adjust margins for left and right items in two-player rows */
+    .squad-container li:first-child {
+        margin-left: 10px; /* Smaller left margin for the first item */
+    }
+    
+    .squad-container li:last-child {
+        margin-right: 10px; /* Smaller right margin for the last item */
+    }
+}
+
+@media (max-width: 600px) {
+    .squad-container li {
+        width: calc(100% - 20px); /* Single player in a row with margin */
+        margin-left: 0; /* Remove left margin for single-player rows */
+        margin-right: 0; /* Remove right margin for single-player rows */
+    }
+}
+
+
+.player-item2 {
+    position: relative;
+    overflow: hidden;
+}
+
+.player-item2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.player-item2::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%; /* Adjust height of darker portion */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: 1;
+}
+
+
+.player {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    font-family: Arial;
+    white-space: nowrap;
+    font-size: 40px;
+    margin-bottom: 30px;
+    z-index: 1; /* Ensure text is on top of the darker overlay */
+}
+
+
+.position {
+    color: goldenrod;
+    font-family: Arial;
+    font-weight: bold;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.player-pos{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    font-family: Arial;
+    white-space: nowrap;
+    font-size: 20px;
+    z-index: 1; /* Ensure text is on top of the darker overlay */
+}
+
+.faded-last-name {
+    position: absolute;
+    top: -250%; /* Adjust the top position */
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: 600;
+    font-style: italic;
+    font-size: 3.5em;
+    margin-bottom: 100px;
+}
+
+
+.register{
+   
+    color: goldenrod;
+    font-family: Arial;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.ok{
+    right: 33.33%;
+    margin-left: 10px;
+}
+
+
+
+.productcont {
+    display: flex;
+    margin-left: 550px;
+}
+
+.rightside {
+    flex: 1;
+    margin-left: 50px;
+}
+
+.shirtSize{
+    width: 80px;
+    height: 30px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #25658b;
+
+}
+
+.label2 {
+    font-weight: bold;
+    text-align: center;
+    color: goldenrod;
+    font-style: italic;
+    margin-bottom: 100px;
+    font-size: 50px;
+}
+
+
+.partners2 {
+    display: inline-block;
+    width: 120px;
+    height: auto;
+    margin: 0 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.logos2 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;;
+
+}
+
+
+.size {
+    font-weight: bold;
+    color: goldenrod;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.login_form2{
+    height: 45px;
+    width: 365px;
+    font-size: 20px;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: #1A237E;
+    border-radius: 3px;
+    border: 1px solid #3949AB;
+    transition: .5s;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-left: 575px;
+}
+
+.lesgo{
+    margin-top: 100px ;
+}
+
+
+.surv{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+.surv form{
+    width: 670px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+    flex-wrap: wrap;
+
+}
+.surv form h1{
+    color:goldenrod;
+    font-weight: 500;
+    margin-top: 20px;
+    width: 500px;
+    text-align: center;
+
+}
+.surv form input{
+    width: 290px;
+    height: 40px;
+    padding-left: 10px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+    background: none;
+    border-bottom: 2px solid #fff;
+    color: goldenrod;
+}
+
+.surv form input::placeholder{
+    color: #ddd;
+
+ }
+ .surv form #lastName,
+ .surv form #mobile{
+   margin-left:20px;
+ }
+.surv form h4{
+    color: #fff;
+    font-weight: 300;
+    width: 600px;
+    margin-top: 20px;
+}
+
+.surv form textarea{
+    background: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    font-weight: 200;
+    font-size: 15px;
+    padding: 10px;
+    outline: none;
+    min-width: 600px;
+    max-width: 600px;
+    min-height: 80px;
+    max-height: 80px;
+
+}
+
+textarea::-webkit-scrollbar{
+    width: 1em;
+}
+
+textarea::-webkit-scrollbar-thumb{
+    background-color: rgba(194,194,194, 713);
+
+}
+.surv form #button{
+    border: none;
+    background: #fff;
+    border-radius: 5px; 
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #333;
+    width: 100px;
+    padding: 0;
+    margin-right: 500px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+
+.surv form #button:hover{
+    opacity: 0.7;
+}
+
+
+.banner55{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("../../IMG/survey.jpg") ;
+    background-size: cover ;
+    background-position: center;
+}
+
+
+
+.copyright {
+    text-align: center; /* Center the copyright text */
+    font-size: 14px; /* Adjust font size */
+    color: goldenrod; /* Adjust color */
+    margin-top: 20px; /* Adjust spacing from the content above */
+  }
